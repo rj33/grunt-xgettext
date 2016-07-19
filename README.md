@@ -111,7 +111,7 @@ The function takes the message string as its sole argument and should return the
 
 #### options.header
 Type: `Array`
-Default value: undefined
+Default value: `undefined`
 
 An array in which you may define any headers you want to appear in the .pot file, such as project id,
 creation and revision dates, content type, encodings, etc.
