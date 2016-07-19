@@ -55,6 +55,10 @@ module.exports = function(grunt) {
             contents += "\n";
         }
 
+        translations = _.filter(translations, function(definition) {
+            return (definition.singular != "");
+        });
+
         contents += _.map(translations, function(definition) {
             var buffer = "";
             if (definition.comment) {
