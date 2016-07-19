@@ -55,9 +55,7 @@ module.exports = function(grunt) {
             contents += "\n";
         }
 
-        translations = _.filter(translations, function(definition) {
-            return (definition.singular != "");
-        });
+        translations = _.filter(translations, 'singular');
 
         contents += _.map(translations, function(definition) {
             var buffer = "";
