@@ -109,6 +109,25 @@ may come in handy, for example, if you want to simplify whitespace.
 
 The function takes the message string as its sole argument and should return the processed message.
 
+#### options.header
+Type: `Array`
+Default value: undefined
+
+An array in which you may define any headers you want to appear in the .pot file, such as project id,
+creation and revision dates, content type, encodings, etc.
+
+The array elements should be strings, ending with escaped '\n':
+
+```js
+header: [
+    '"Project-Id-Version: KypyMypy\\n"',
+    '"POT-Creation-Date: ' + (new Date()).toString() + '\\n"',
+    '"PO-Revision-Date: ' + (new Date()).toString() + '\\n"',
+    '"Content-Type: text/plain; charset=UTF-8\\n"',
+    '"Content-Transfer-Encoding: 8bit\\n"'
+]
+```
+
 ### Files
 
 #### files.handlebars
