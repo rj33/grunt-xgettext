@@ -76,8 +76,9 @@ module.exports = function(file, options) {
                                   message.comment;
                 lineIndex--;
             }
-
-            collector.addMessage(message);
+            if (message.singular) {
+                collector.addMessage(message);
+            }
         } else {
             grunt.log.debug("No arguments to translation method");
         }
